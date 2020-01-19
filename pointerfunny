@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+//import "math"
+
+func main() {
+	i, j, k := "chips", 2701, "fish"
+    var m int = j/2	
+	p, q, r, s  := &i , &j , &k ,&m      // point to i
+	z := &p
+	a := &z
+	b := &a
+	c := &b
+	d := &c
+	fmt.Println(&*&*p, *&*&*p) // read i through the pointer
+	fmt.Println(q, *&*q)
+	fmt.Println(r, *r)
+    fmt.Println(s, *s)
+	fmt.Println(z, *z)
+	fmt.Println(a, *a)
+	fmt.Println(b, *b)
+	fmt.Println(c, *c)
+	fmt.Println(d, ******d)
+	fmt.Println(j, *j)
+
+
+	
+	
+	
+	/* *p = 21         // set i through the pointer
+	fmt.Println(i)  // see the new value of i
+	fmt.Println(*p)
+    *p = *p * 2
+	p = &j         // point to j
+	*p = *p / 37   // divide j through the pointer
+	fmt.Println(j) // see the new value of j
+	fmt.Println(p)
+	q = p + p
+	fmt.Println(q) */
+}
